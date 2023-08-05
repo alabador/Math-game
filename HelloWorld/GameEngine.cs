@@ -1,4 +1,6 @@
-﻿namespace HelloWorld
+﻿using HelloWorld.Models;
+
+namespace HelloWorld
 {
     internal class GameEngine
     {
@@ -34,7 +36,7 @@
                 }
             }
 
-            Helpers.AddToHistory(score, gameAmount, "Division");
+            Helpers.AddToHistory(score, gameAmount, GameType.Division);
 
 
             Console.Clear();
@@ -75,7 +77,7 @@
                 }
             }
 
-            Helpers.AddToHistory(score, gameAmount, "Multiplication");
+            Helpers.AddToHistory(score, gameAmount, GameType.Multiplication);
 
 
             Console.Clear();
@@ -114,7 +116,7 @@
                 }
             }
 
-            Helpers.AddToHistory(score, gameAmount, "Subtraction");
+            Helpers.AddToHistory(score, gameAmount, GameType.Subtraction);
 
 
             Console.Clear();
@@ -153,7 +155,7 @@
                 }
             }
 
-            Helpers.AddToHistory(score, gameAmount, "Addition");
+            Helpers.AddToHistory(score, gameAmount, GameType.Addition);
 
             Console.Clear();
             Console.WriteLine($"Game over. Your score is {score} out of {gameAmount}!");
